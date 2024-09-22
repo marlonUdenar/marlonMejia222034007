@@ -1,0 +1,27 @@
+:read-only {
+    --color1: pink;
+    --color2: white;
+
+}
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    background-color: grey;
+    padding: 2%;
+    top: 0;
+    left: 0;
+}
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--color2);
+    display: block;
+}
+.sidebar a:visited {
+    color: var( --color1 );
+}
