@@ -1,0 +1,28 @@
+<form [formGroup] ="loginForm">
+    <div class="formLoginPage">
+        <p-card header="Login" [style]="{maxwidth:'400px'}" >
+            <div class="mainForm">
+                <div class="formInput">
+                    <p>Email</p>
+                    <input  matInput type="email" pInputText  name="email" 
+                            formControlName="email" placeholder="type your email"/>
+
+                    <p>Password</p>
+                    <p-password  formControlName="password" [toggleMask]="true" placeholder="type your password" class="w-full" styleClass="w-full" ></p-password>
+                </div>
+            
+                <div class="formButton">
+                    <p-button label="Register" severity="secondary" class="reg" styleClass="w-full" />
+                    <p-button label="Login" class="reg" styleClass="w-full" />
+                    
+                </div>
+                
+                <div class="formFooter">
+                    <p>Not a Member?</p>
+                    <a href="" >Register</a>
+                </div>
+            </div>
+        </p-card>
+    </div>
+
+</form>
