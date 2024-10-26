@@ -1,0 +1,50 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.formLoginPage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    min-width: 300px;
+}
+@media (max-width: 460px) {
+    .formLoginPage{
+        width: 90%;
+    }
+}
+.formInput input {
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    border-width: 1px;
+    font-size: 17px;
+    padding-left: 11px;
+}
+
+:host ::ng-deep .p-inputtext { 
+    width: 100%;
+    height: 40px;
+    font-size: 17px; 
+}
+
+.formButton {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.reg {
+    color: red;
+    width: 47%;
+}
+.formFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
