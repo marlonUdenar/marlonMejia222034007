@@ -6,6 +6,8 @@ import { ButtonModule } from 'primeng/button';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
 import { CommonModule } from '@angular/common';
+import { LoginService } from '../../services/login.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +20,7 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder, private loginService: LoginService){
 
     this.loginForm = this.fb.group({
 
@@ -44,6 +46,8 @@ export class LoginComponent {
 
   onSubmit() {
     if(this.loginForm.validator) {
+      const {email, password} =this.loginForm.value;
+      this.loginService.login(email, password).subscribe(response => {console.log})
       console.log(this.loginForm.value);
     } else {
       console.log('Formulario Invalido')
